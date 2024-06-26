@@ -1,4 +1,5 @@
 @layer reset, base, typography, layout, components, utilities;
+@import "./components.css"
 
 :root {
   --color-primary-400: oklch(60% 0.2 230);
