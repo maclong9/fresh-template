@@ -8,7 +8,7 @@ Run the following in your terminal emulator.
 git clone git@github.com:wearequantum/cmbc-immersion.git
 cd cmbc-immersion
 docker build -t fresh-template .
-docker run -p 8000 fresh-template
+docker run -p 8000 fresh-template --name fresh-template
 ```
 
 > [!WARNING]
