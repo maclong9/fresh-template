@@ -2,7 +2,6 @@
 @import "./components.css" layer(components);
 
 @layer reset {
-  /* CSS Reset */
   *,
   *::before,
   *::after {
@@ -35,7 +34,6 @@
 
 @layer base {
   :root {
-    /* Color variables with 400-600 scale */
     --color-primary-400: oklch(60% 0.2 240);
     --color-primary-500: oklch(55% 0.2 240);
     --color-primary-600: oklch(50% 0.2 240);
@@ -51,14 +49,12 @@
     --color-light: oklch(95% 0.01 60);
     --color-dark: oklch(20% 0.01 240);
 
-    /* Typography variables */
     --font-heading: system-ui;
     --font-body: system-ui;
     --font-size: 16px;
     --line-height-base: 1.6;
     --letter-spacing-base: 0em;
 
-    /* Modular scale */
     --scale-ratio: 1;
     --space-xs: calc(1rem / var(--scale-ratio));
     --space-sm: 1rem;
@@ -68,7 +64,6 @@
       1rem * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio)
     );
 
-    /* Font sizes */
     --text-xs: calc(1rem / var(--scale-ratio));
     --text-sm: 1rem;
     --text-md: calc(1rem * var(--scale-ratio));
@@ -77,14 +72,13 @@
       1rem * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio)
     );
 
-    /* Rounding */
     --rounding-base: 8px;
     --rounding-container: 10px;
   }
 
   body {
-    font-family: var(--font-body) * var(--scale-ratio);
-    font-size: var(--font-size) ;
+    font-family: var(--font-body);
+    font-size: var(--font-size);
     line-height: var(--line-height-base);
     letter-spacing: var(--letter-spacing-base);
     color: var(--color-dark);
@@ -123,7 +117,6 @@
 }
 
 @layer utilities {
-  /* Margin utilities */
   .m-xs {
     margin: var(--space-xs);
   }
@@ -140,7 +133,6 @@
     margin: var(--space-xl);
   }
 
-  /* Padding utilities */
   .p-xs {
     padding: var(--space-xs);
   }
@@ -157,7 +149,6 @@
     padding: var(--space-xl);
   }
 
-  /* Flexbox utilities */
   .flex {
     display: flex;
   }
@@ -173,7 +164,6 @@
 }
 
 @layer components {
-  /* Header styles */
   header {
     background-color: var(--color-primary-500);
     color: var(--color-light);
@@ -210,7 +200,6 @@
     }
   }
 
-  /* Main content styles */
   main {
     padding: var(--space-xl) 0;
 
@@ -229,7 +218,6 @@
     }
   }
 
-  /* Form styles */
   form {
     display: grid;
     gap: var(--space-md);
@@ -241,13 +229,12 @@
     input,
     textarea {
       width: 100%;
-      padding: var(--space-sm);
+      padding: var(--space-xs);
       border: 1px solid var(--color-primary-300);
       border-radius: var(--rounding-base);
     }
   }
 
-  /* Footer styles */
   footer {
     background-color: var(--color-secondary-500);
     color: var(--color-dark);

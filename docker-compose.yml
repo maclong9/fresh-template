@@ -1,0 +1,8 @@
+services:
+  deno-fresh-app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: deno run -A --watch=static/,routes/ dev.ts
