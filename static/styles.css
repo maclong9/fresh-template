@@ -1,5 +1,5 @@
-@layer reset, base, utilities, components, dark-mode, print;
-@import "./components.css" layer(components);
+@layer reset, base, components, dark-mode, print;
+@import "./components.css"
 
 @layer reset {
   *,
