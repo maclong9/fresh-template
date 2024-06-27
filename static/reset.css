@@ -5,7 +5,7 @@
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
 }
 
 img, picture, video, canvas, svg {

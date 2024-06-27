@@ -1,4 +1,4 @@
-@layer reset, base, components, dark-mode, print;
+@layer reset, base, components, dark-mode;
 @import "./reset.css" layer(reset);
 @import "./components.css" layer(components);
 
@@ -58,12 +58,15 @@
     min-height: 100vh;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  a {
+    color: var(--color-primay-500);
+
+    &:hover {
+      color: var(--color-primary-600);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
 
@@ -98,28 +101,26 @@
       justify-content: space-between;
       align-items: center;
 
-    h1 {
-      font-size: var(--text-xl);
-    }
-
-    nav ul {
-      display: flex;
-      list-style-type: none;
-
-      li:not(:last-child) {
-        margin-right: var(--space-md);
+      @media(min-width: 640px) {
+        flex-direction: row;
+        max-width: 100%;
+        padding: 0 var(--space-xl);
       }
 
-      a {
-        color: var(--color-light);
-        text-decoration: none;
-        transition: color 0.3s ease;
+      nav ul {
+        display: flex;
+        list-style-type: none;
 
-        &:hover {
-          color: var(--color-tertiary-300);
+        li:not(:last-child) {
+          margin-right: var(--space-md);
+        }
+
+        a {
+          color: var(--color-light);
+          text-decoration: none;
+          transition: color 0.3s ease;
         }
       }
-    }
     }
   }
 
@@ -177,7 +178,6 @@
     body {
       background-color: var(--color-dark);
       color: var(--color-light);
-
     }
 
     header {
@@ -195,8 +195,7 @@
   }
 }
 
-@layer responsive {
-  @media screen and (min-width: 640px) {
+@media screen and (min-width: 640px) {
   :root {
     --scale-ration: 1.15;
   }

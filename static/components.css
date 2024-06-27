@@ -10,4 +10,12 @@ button, input[type="submit"], a.button {
   cursor: pointer;
   border-radius: var(--rounding-base);
   transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-primary-600);
+  }
+
+  @media(prefers-color-scheme: dark) {
+    color: var(--color-light);
+  }
 }
