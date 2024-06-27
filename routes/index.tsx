@@ -4,7 +4,8 @@ export default function Home() {
       <section id="home">
         <h2>Welcome to My Website</h2>
         <p>
-          This is a simple example of a responsive layout using HTML and CSS, see more <a href="/">here</a>.
+          This is a simple example of a responsive layout using HTML and CSS,
+          see more <a href="/">here</a>.
         </p>
       </section>
 

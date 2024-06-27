@@ -1,15 +1,21 @@
 import { type PageProps } from "$fresh/server.ts";
+import SEO from "@/components/layout/SEO.tsx";
 
-export default function App({ Component }: PageProps) {
-  console.log("Hello, Console");
-
+export default function App({ Component, url }: PageProps) {
   return (
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Responsive Layout Example</title>
         <link rel="stylesheet" href="styles.css" />
+        <SEO
+          site="Website"
+          url={url}
+          description="Welcome to my template site"
+          keywords="site, things"
+          ogImage="/og.webp"
+          twitterHandle="@twitterhandle"
+        />
       </head>
       <body>
         <header>
