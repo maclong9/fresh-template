@@ -264,14 +264,10 @@
 
 @layer dark-mode {
   @media (prefers-color-scheme: dark) {
-    :root {
-      --color-light: oklch(20% 0.01 240);
-      --color-dark: oklch(95% 0.01 60);
-    }
-
     body {
-      background-color: var(--color-light);
-      color: var(--color-dark);
+      background-color: var(--color-dark);
+      color: var(--color-light);
+
     }
 
     header {
