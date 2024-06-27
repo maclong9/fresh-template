@@ -12,7 +12,7 @@ export default function App({ Component }: PageProps) {
       <body>
         <header>
           <div class="container">
-            <h1>My Website</h1>
+            <h1>Website</h1>
             <nav>
               <ul>
                 <li>
