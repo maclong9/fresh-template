@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,12 +10,19 @@ body {
   font-smooth: always;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -22,7 +31,8 @@ input, button, textarea, select {
     font-size: 12pt;
   }
 
-  header, footer {
+  header,
+  footer {
     display: none;
   }
 
@@ -36,7 +46,9 @@ input, button, textarea, select {
     color: var(--color-dark);
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 
@@ -48,3 +60,4 @@ input, button, textarea, select {
     margin: 2cm;
   }
 }
+

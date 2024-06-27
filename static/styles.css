@@ -25,22 +25,35 @@
     --line-height-base: 1.6;
     --letter-spacing-base: 0em;
 
-    --scale-ratio: 1;
-    --space-xs: calc(1rem / var(--scale-ratio));
-    --space-sm: 1rem;
-    --space-md: calc(1rem * var(--scale-ratio));
-    --space-lg: calc(1rem * var(--scale-ratio) * var(--scale-ratio));
+    --scale-ratio: 1.25;
+    --space-3xs: calc(0.25rem / var(--scale-ratio) / var(--scale-ratio));
+    --space-2xs: calc(0.25rem / var(--scale-ratio));
+    --space-xs: 0.25rem;
+    --space-sm: calc(0.25rem * var(--scale-ratio));
+    --space-md: calc(0.25rem * var(--scale-ratio) * var(--scale-ratio));
+    --space-lg: calc(
+      0.25rem * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio)
+    );
     --space-xl: calc(
-      1rem * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio)
+      0.25rem * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio) *
+        var(--scale-ratio)
+    );
+    --space-2xl: calc(
+      0.25rem * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio) *
+        var(--scale-ratio) * var(--scale-ratio)
+    );
+    --space-3xl: calc(
+      0.25rem * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio) *
+        var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio)
     );
 
-    --text-xs: calc(1rem / var(--scale-ratio));
-    --text-sm: 1rem;
-    --text-md: calc(1rem * var(--scale-ratio));
-    --text-lg: calc(1rem * var(--scale-ratio) * var(--scale-ratio));
-    --text-xl: calc(
-      1rem * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio)
-    );
+    --text-xs: var(--space-xs);
+    --text-sm: var(--space-sm);
+    --text-md: var(--space-md);
+    --text-lg: var(--space-lg);
+    --text-xl: var(--space-xl);
+    --text-2xl: var(--space-2xl);
+    --text-3xl: var(--space-3xl);
 
     --rounding-base: 8px;
     --rounding-container: 10px;
@@ -66,7 +79,12 @@
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
 
@@ -101,7 +119,7 @@
       justify-content: space-between;
       align-items: center;
 
-      @media(min-width: 640px) {
+      @media (min-width: 640px) {
         flex-direction: row;
         max-width: 100%;
         padding: 0 var(--space-xl);
@@ -116,9 +134,7 @@
         }
 
         a {
-          color: var(--color-light);
           text-decoration: none;
-          transition: color 0.3s ease;
         }
       }
     }
@@ -128,13 +144,7 @@
     padding: var(--space-xl) 0;
 
     section {
-      margin-bottom: var(--space-xl);
-
-      h2 {
-        font-size: var(--text-lg);
-        margin-bottom: var(--space-md);
-        color: var(--color-primary-700);
-      }
+      margin: var(--space-3xl) 0;
 
       p {
         margin-bottom: var(--space-md);
@@ -153,9 +163,33 @@
     input,
     textarea {
       width: 100%;
-      padding: var(--space-xs);
+      padding: var(--space-sm);
       border: 1px solid var(--color-primary-300);
       border-radius: var(--rounding-base);
+    }
+  }
+
+  button,
+  input[type="submit"],
+  a.button {
+    background-color: var(--color-primary-500);
+    border: none;
+    color: var(--color-dark);
+    padding: var(--space-md);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: var(--rounding-base);
+    transition: background-color 0.3s ease;
+    margin: var(--space-xl) 0;
+
+    &:hover {
+      background-color: var(--color-primary-600);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-light);
     }
   }
 
@@ -184,10 +218,6 @@
       background-color: var(--color-primary-700);
     }
 
-    main section h2 {
-      color: var(--color-primary-300);
-    }
-
     footer {
       background-color: var(--color-secondary-700);
       color: var(--color-light);
@@ -197,30 +227,31 @@
 
 @media screen and (min-width: 640px) {
   :root {
-    --scale-ration: 1.15;
+    --scale-ratio: 1.33;
   }
 }
 
 @media screen and (min-width: 768px) {
   :root {
-    --scale-ratio: 1.25;
+    --scale-ratio: 1.41;
   }
 }
 
 @media screen and (min-width: 1024px) {
   :root {
-    --scale-ration: 1.5;
+    --scale-ratio: 1.5;
   }
 }
 
 @media screen and (min-width: 1280px) {
   :root {
-    --scale-ration: 1.75;
+    --scale-ratio: 1.62;
   }
 }
 
 @media screen and (min-width: 1536px) {
   :root {
-    --scale-ration: 2;
+    --scale-ratio: 1.75;
   }
 }
+
