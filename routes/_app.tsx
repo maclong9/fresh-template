@@ -20,7 +20,9 @@ export default function App({ Component, url }: PageProps) {
       <body>
         <header>
           <div class="container">
-            <h1>Website</h1>
+            <a href="/">
+              <h1>Website</h1>
+            </a>
             <nav>
               <ul>
                 <li>
