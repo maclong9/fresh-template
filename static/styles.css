@@ -96,10 +96,14 @@
 
         li:not(:last-child) {
           margin-right: 1rem;
+        }
 
-          a {
-            text-decoration: none;
-          }
+        a {
+          text-decoration: none;
+        }
+  
+        a[aria-current='page'] {
+          color: var(--color-primary-500);
         }
       }
     }
